@@ -1,4 +1,56 @@
+var timer_secEl = document.getElementById('countdown');
+var timerboxEl = document.getElementById('timerbox');
+var startbtn = document.getElementById('start');
 
+// var message =
+//   'Time-Out! Please click start button to start again Good-luck!';
+// var words = message.split(' ');
+
+// Timer that counts down from 75
+function countdown() {
+    var timeLeft = 75;
+  
+    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function() {
+      // As long as the `timeLeft` is greater than 1
+      if (timeLeft > 1) {
+            // Set the `textContent` of `timer_secEl` to show the remaining seconds
+            timer_secEl.textContent = timeLeft + ' seconds ';
+            // Decrement `timeLeft` by 1
+            timeLeft--;
+        }else if (timeLeft === 1) {
+            // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
+            timer_secEl.textContent = timeLeft + ' second ';
+            timeLeft--;
+        } else {
+            // Once `timeLeft` gets to 0, set `timer_secEl` to an empty string
+            timer_secEl.textContent = '';
+            // Use `clearInterval()` to stop the timer
+            clearInterval(timeInterval);
+           // Call the `displayMessage()` function
+           displayMessage();
+        }
+    }, 1000);
+}
+
+
+// // Displays the message one word at a time
+// function displayMessage() {
+//     var wordCount = 0;
+  
+//     // Uses the `setInterval()` method to call a function to be executed every 300 milliseconds
+//     var msgInterval = setInterval(function() {
+//       if (words[wordCount] === undefined) {
+//         clearInterval(msgInterval);
+//       } else {
+//         mainEl.textContent = words[wordCount];
+//         wordCount++;
+//       }
+//     }, 300);
+// }
+  
+// startbtn.onclick = countdown;
+startbtn.addEventListener("click", countdown());
 
 //getting all required elements
 const start_btn = document.querySelector(".start_btn button");
@@ -55,45 +107,5 @@ continue_btn.onclick = ()=> {
 }
 
 
-let que_count = 0;
-let que_numb = 1;
 
-const next_btn = quiz_box.querySelector(".next_btn");
-
-// If Next Button Clicked
-next_btn.onclick = ()=>{
-    if(que_count < questions.lenght -1) {
-        que_count++;
-        que_numb++;
-        showQuestions(que_count);
-        queCounter(1);
-    }else {
-        console.log("questions completed");
-    }
-}
-
-// Getting questions and options from array
-function showQuestions(index){
-    const que_text = document.querySelector(".que_text");
-    const option_list = document.querySelector(".option_list");
-    // let que_tag = '<span>'+ questions[index].numb + "." + question +'<span>';
-    let option_tag = '<div class="option">' + questions[index].options[0] +'<span></span></div>'
-                     + '<div class="option">' + questions[index].options[1] +'<span></span></div>'
-                     + '<div class="option">' + questions[index].options[2] +'<span></span></div>'
-                     + '<div class="option">' + questions[index].options[3] +'<span></span></div>';                
-    que_text.innerHTML = que_tag;
-    option_list.innerHTML = option_tag;
-
-    const option = option_list.querySelectorAll(".option");
-    for (let i = 0; i < option.lenght; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)");
-    }
-}
-
-function optionSelected(answer){
-    let userAns = answer.textContent;
-    let correctAns = 
-    console.log(userAns);
-    
-}
 

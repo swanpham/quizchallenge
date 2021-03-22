@@ -12,12 +12,14 @@
 <body>
     <header>
         <h1 class="title">Awesome Quiz Application</h1>
-        <p>Click the button below to start!</p>
-        <div class="timer" id="timerbox">
-            <div class="time_text">Time Left</div>
-            <div class="timer_sec">75</div>
-        </div>
-        <div class="start_btn"><button class="startbtn">Start Quiz</button></div>
+        <h3>Click the button below to start!</h3>
+        <div class="container">
+            <div class="start_btn"><button class="startbtn" id="start">Start Quiz</button></div>        
+            <div class="timer" id="timerbox">
+                <div class="time_text">Time Left</div>
+                <div class="timer_sec" id="countdown">75</div>
+            </div>
+         </div>
         
     </header>
     <!-- Start Quiz Button -->
@@ -31,7 +33,7 @@
       
             </div>
             <div class="info_list">
-                <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+                <div class="info">1. You will have only <span>10 seconds</span> per each question.</div>
                 <div class="info">2. Once you select your answer, you can't reselect.</div>
                 <div class="info">3. You can't select any option once time goes off.</div>
                 <div class="info">4. You can't exit from the Quiz while you're playing.</div>
@@ -49,20 +51,18 @@
                     <span>What does HTML stand for?</span>
                 </div>
                 <div class="option_list">
-                    <div class="option">
+                    <button class="option">
                         <span>Hyper Text Preprocessor</span>
-                        <div class="icon tick"><i class="fas fa-check"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>Hyper Text Markup Language</span>
-                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                    </div>
-                    <div class="option">
+                    </button>
+                    <button class="option">
+                        <span>Hyper Text Markup Language</span>                    
+                    </button>
+                    <button class="option">
                         <span>Hyper Text Multiple Language</span>
-                    </div>
-                    <div class="option">
+                    </button>
+                    <button class="option">
                         <span>Hyper Tool Multi Language</span>
-                    </div>
+                    </button>
                 </div>
             </section>
             <!-- <section>
