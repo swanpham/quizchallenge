@@ -1,6 +1,7 @@
-var timer_secEl = document.getElementById('countdown');
-var timerboxEl = document.getElementById('timerbox');
+var timer_secE1 = document.getElementById('countdown');
+var timerboxE1 = document.getElementById('timerbox');
 var startbtn = document.getElementById('start');
+
 
 // var message =
 //   'Time-Out! Please click start button to start again Good-luck!';
@@ -15,16 +16,16 @@ function countdown() {
       // As long as the `timeLeft` is greater than 1
       if (timeLeft > 1) {
             // Set the `textContent` of `timer_secEl` to show the remaining seconds
-            timer_secEl.textContent = timeLeft + ' seconds ';
+            timer_secE1.textContent = timeLeft + ' seconds ';
             // Decrement `timeLeft` by 1
             timeLeft--;
         }else if (timeLeft === 1) {
             // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
-            timer_secEl.textContent = timeLeft + ' second ';
+            timer_secE1.textContent = timeLeft + ' second ';
             timeLeft--;
         } else {
             // Once `timeLeft` gets to 0, set `timer_secEl` to an empty string
-            timer_secEl.textContent = '';
+            timer_secE1.textContent = '';
             // Use `clearInterval()` to stop the timer
             clearInterval(timeInterval);
            // Call the `displayMessage()` function
@@ -34,20 +35,20 @@ function countdown() {
 }
 
 
-// // Displays the message one word at a time
-// function displayMessage() {
-//     var wordCount = 0;
+// Displays the message one word at a time
+function displayMessage() {
+    var wordCount = 0;
   
-//     // Uses the `setInterval()` method to call a function to be executed every 300 milliseconds
-//     var msgInterval = setInterval(function() {
-//       if (words[wordCount] === undefined) {
-//         clearInterval(msgInterval);
-//       } else {
-//         mainEl.textContent = words[wordCount];
-//         wordCount++;
-//       }
-//     }, 300);
-// }
+    // Uses the `setInterval()` method to call a function to be executed every 300 milliseconds
+    var msgInterval = setInterval(function() {
+      if (words[wordCount] === undefined) {
+        clearInterval(msgInterval);
+      } else {
+        mainEl.textContent = words[wordCount];
+        wordCount++;
+      }
+    }, 300);
+}
   
 // startbtn.onclick = countdown;
 startbtn.addEventListener("click", countdown());
