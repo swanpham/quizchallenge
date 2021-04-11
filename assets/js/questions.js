@@ -14,7 +14,7 @@ let questions = [
     },
     {
         numb: 2,
-        questions: "After you’re done creating and testing a new feature in a feature branch, what is the next step?",
+        question: "After you’re done creating and testing a new feature in a feature branch, what is the next step?",
         answer: "Merge the feature branch into the main branch",
         options: [
             "Merge the feature branch into the main branch",
@@ -26,7 +26,7 @@ let questions = [
     },
     {
         numb: 3,
-        questions: "How do you create a flexbox?",
+        question: "How do you create a flexbox?",
         answer: "display: flex;",
         options: [
             "display: flex;",
@@ -38,7 +38,7 @@ let questions = [
     },
     {
         numb: 4,
-        questions: "By default, in which direction does a flexbox lay out its items?",
+        question: "By default, in which direction does a flexbox lay out its items?",
         answer: "A row (horizontal), with all of the child elements laid out side by side.",
         options: [
             "A row (horizontal), with all of the child elements laid out side by side.",
@@ -50,7 +50,7 @@ let questions = [
     },
     {
         numb: 5,
-        questions: "What do media queries allow us to do?",
+        question: "What do media queries allow us to do?",
         answer: "Change CSS at different browser widths.",
         options: [
             "Play videos on our page.",
